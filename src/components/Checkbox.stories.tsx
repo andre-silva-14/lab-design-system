@@ -5,15 +5,15 @@ import { Text } from "./Text";
 export default {
   title: "Components/Checkbox",
   component: Checkbox,
-  args: {},
+  args: { id: "checkbox-label", "aria-label": "Remember me for 30 days." },
   argTypes: {},
   decorators: [
     (Story) => {
       return (
-        <div className="flex items-center gap-2">
+        <label htmlFor="checkbox-label" className="flex items-center gap-2">
           {Story()}
           <Text size="sm">Remember me for 30 days.</Text>
-        </div>
+        </label>
       );
     },
   ],
